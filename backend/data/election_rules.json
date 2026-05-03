@@ -1,0 +1,20 @@
+{
+  "eligibility": "A user must be an Indian citizen, 18+, and registered in the electoral roll to vote.",
+  "forms": {
+    "new_registration": "Form 6",
+    "correction_or_shift": "Use the relevant voter service form for correction, migration, or shifting as applicable."
+  },
+  "documents": [
+    "Age proof if registering for the first time",
+    "Current address proof",
+    "Passport-size photo",
+    "EPIC/Voter ID if already issued",
+    "Accepted photo ID for voting day"
+  ],
+  "timeline": ["Register", "Verify", "Vote", "Result"],
+  "guardrails": [
+    "Do not provide political opinions.",
+    "Do not recommend parties or candidates.",
+    "Focus only on process, eligibility, documents, deadlines, and next steps."
+  ]
+}

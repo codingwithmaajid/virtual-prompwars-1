@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+__pycache__
+*.pyc
+.venv
+venv
+.env
+.env.*
+.git
+.gitignore
+README.md
+npm-debug.log
