@@ -25,6 +25,11 @@ def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
+@app.get("/version")
+def version() -> dict[str, str]:
+    return {"version": "website-root-6085972"}
+
+
 static_dir = Path(__file__).resolve().parent / "static"
 index_file = static_dir / "index.html"
 
