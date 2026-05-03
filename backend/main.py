@@ -1,6 +1,7 @@
 from pathlib import Path
 
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
@@ -25,5 +26,18 @@ def health() -> dict[str, str]:
 
 
 static_dir = Path(__file__).resolve().parent / "static"
+index_file = static_dir / "index.html"
+
+
+@app.get("/", include_in_schema=False)
+def frontend_index():
+    if index_file.exists():
+        return FileResponse(index_file)
+    return {
+        "error": "Frontend build not found in container.",
+        "fix": "Redeploy using the project Dockerfile so Next.js is built and copied into backend/static.",
+    }
+
+
 if static_dir.exists():
     app.mount("/", StaticFiles(directory=static_dir, html=True), name="frontend")
