@@ -1,4 +1,4 @@
-# VoteFlow AI - Election Copilot
+# VoteFlow AI - Election Copilote📋️
 
 VoteFlow AI is a non-political AI election copilot for India. It guides users through the voting process in a personalized, step-by-step way using age, location, voter status, and special situations such as changed city, lost voter ID, missed deadline, or missing roll entry.
 
